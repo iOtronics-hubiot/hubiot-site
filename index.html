@@ -3,26 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hubiot Australia/title>
+  <title>Hubiot | Cognitive Secure Innovation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #222;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #e0f7fa;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 80px 20px 40px;
       text-align: center;
-      padding: 100px;
     }
-    h1 {
-      color: #004578;
-      font-size: 2.5em;
+    header h1 {
+      font-size: 3.5em;
+      font-weight: 800;
+      background: linear-gradient(to right, #00feca, #00a8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 3s infinite alternate;
     }
-    p {
-      font-size: 1.2em;
+    header p {
+      font-size: 1.3em;
+      margin-top: 20px;
+      color: #b0d8e0;
+    }
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #aaf3ff;
+    }
+    section p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+      color: #e1f4f9;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta a {
+      display: inline-block;
+      background: #00a8ff;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .cta a:hover {
+      background: #008ecc;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #6fc5d6;
+      padding: 40px 20px;
+    }
+    @keyframes pulse {
+      from { transform: scale(1); opacity: 0.8; }
+      to { transform: scale(1.04); opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>Hubiot Pty Ltd</h1>
-  <p>Secure Innovation through Cognitive Technology</p>
+  <header>
+    <h1>Cognitive Secure Innovation</h1>
+    <p>Empowering mission-driven intelligence with design-led security</p>
+  </header>
+
+  <section>
+    <h2>About Hubiot</h2>
+    <p>Hubiot Pty Ltd pioneers trusted, real-time intelligence platforms that integrate cognitive automation, secure telemetry, and zero-intrusion design principles. We build technology that adapts at the edge and scales into critical, adversarial environments.</p>
+  </section>
+
+  <section>
+    <h2>Platform Highlights</h2>
+    <p>Our solutions leverage signal intelligence, embedded access, and cryptographic assurance to transform field operations across defense, aerospace, critical infrastructure, and national security domains. All of our innovations are backed by patent filings, modern AI logic, and built-in resilience.</p>
+  </section>
+
+  <section>
+    <h2>Why It Matters</h2>
+    <p>Hubiot enables actionable insights from previously unreachable data sources — reducing latency, increasing mission integrity, and creating cyber-physical visibility in dynamic operating contexts. Our approach integrates research, IP, and deployment into a secure digital continuum.</p>
+  </section>
+
+  <div class="cta">
+    <a href="mailto:info@hubiot.com.au">Contact Us</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Hubiot Pty Ltd. Designed for resilience. Powered by intelligence.
+  </footer>
 </body>
 </html>
