@@ -112,25 +112,35 @@
     <h2>Why It Matters</h2>
     <p>Hubiot enables actionable insights from previously unreachable data sources — reducing latency, increasing mission integrity, and creating cyber-physical visibility in dynamic operating contexts. Our approach integrates research, IP, and deployment into a secure digital continuum.</p>
   </section>
-<section style="padding: 40px; font-family: monospace; background: #0A1428; color: #00e0ff;">
-  <h2 style="font-size: 24px; margin-bottom: 16px;">🛡 Live Botnet IP Feed</h2>
-  <ul id="threat-feed" style="list-style: none; padding-left: 0;"></ul>
+<section style="background-color:#0f172a; padding: 30px 20px; border-radius: 8px; color: #67e8f9; font-family: monospace; max-width: 1000px; margin: 40px auto;">
+  <h2 style="font-size: 20px; font-weight: bold; display: flex; align-items: center;">
+    🛡 <span style="margin-left: 10px;">Live Botnet IP Feed</span>
+  </h2>
+  <ul id="threat-feed" style="list-style: none; padding-left: 0; margin-top: 20px;"></ul>
   <script>
-    fetch('https://feodotracker.abuse.ch/downloads/ipblocklist.json')
+    fetch('https://corsproxy.io/?https://feodotracker.abuse.ch/downloads/ipblocklist.json')
       .then(response => response.json())
       .then(data => {
         const feed = document.getElementById('threat-feed');
-        data.slice(0, 5).forEach(entry => {
+        const entries = data.slice(0, 5);
+        if (entries.length === 0) throw new Error("No data");
+
+        entries.forEach(entry => {
           const item = document.createElement('li');
-          item.textContent = `IP: ${entry.ip_address} | Threat: ${entry.malware} | Seen: ${entry.first_seen}`;
+          item.style.marginBottom = '8px';
+          item.textContent = `IP: ${entry.ip_address} | Malware: ${entry.malware} | Seen: ${entry.first_seen}`;
           feed.appendChild(item);
         });
       })
       .catch(err => {
-        document.getElementById('threat-feed').innerHTML = "<li>⚠️ Unable to load threat data</li>";
+        const fallback = document.createElement('li');
+        fallback.style.color = '#facc15'; // amber/yellow
+        fallback.innerHTML = '⚠️ Unable to load threat data';
+        document.getElementById('threat-feed').appendChild(fallback);
       });
   </script>
 </section>
+
   
   <div class="cta">
     <a href="mailto:info@hubiot.com.au">Contact Us</a>
