@@ -1,154 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hubiot | Cognitive Secure Innovation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      color: #e0f7fa;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 60px 20px 20px;
-      text-align: center;
-    }
-    header img {
-      max-height: 60px;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      font-size: 3.5em;
-      font-weight: 800;
-      background: linear-gradient(to right, #00feca, #00a8ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: pulse 3s infinite alternate;
-    }
-    header p {
-      font-size: 1.3em;
-      margin-top: 20px;
-      color: #b0d8e0;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #aaf3ff;
-    }
-    section p {
-      font-size: 1.1em;
-      line-height: 1.6em;
-      color: #e1f4f9;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .cta a {
-      display: inline-block;
-      background: #00a8ff;
-      color: #fff;
-      padding: 12px 28px;
-      border-radius: 40px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .cta a:hover {
-      background: #008ecc;
-    }
-    .hero {
-      text-align: center;
-    }
-    .hero img {
-      width: 100%;
-      max-width: 1100px;
-      border-radius: 12px;
-      margin-top: 30px;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #6fc5d6;
-      padding: 40px 20px;
-    }
-    @keyframes pulse {
-      from { transform: scale(1); opacity: 0.8; }
-      to { transform: scale(1.04); opacity: 1; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="IOtronics is a foundational technology platform developed by Hubiot to create trusted understanding across complex digital environments.">
+<meta name="theme-color" content="#05070a">
+<title>IOtronics — Trusted Understanding for Complex Digital Systems</title>
+<style>
+:root{--bg:#05070a;--panel:rgba(255,255,255,.045);--line:rgba(255,255,255,.11);--text:#f5f7fb;--muted:#a6afbc;--accent:#8de7ff;--max:1180px;--radius:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:radial-gradient(circle at 50% -10%,rgba(85,155,255,.16),transparent 34%),radial-gradient(circle at 92% 4%,rgba(148,98,255,.12),transparent 26%),var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+header{position:fixed;inset:0 0 auto;z-index:50;padding:18px 0;background:rgba(5,7,10,.68);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.03em}.mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,#fff,#91ddff 55%,#a492ff);box-shadow:0 0 40px rgba(120,200,255,.25);position:relative}.mark:after{content:"";position:absolute;inset:8px;border:1px solid #071017;border-radius:4px;transform:rotate(45deg)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.navcta{border:1px solid var(--line);padding:10px 15px;border-radius:999px}
+.hero{min-height:100vh;display:grid;align-items:center;padding:150px 0 90px;position:relative;isolation:isolate}#field{position:absolute;inset:0;width:100%;height:100%;z-index:-2;opacity:.58}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(5,7,10,.16),rgba(5,7,10,.35) 58%,var(--bg))}.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;color:#d6e7ef}.eyebrow:before{content:"";width:38px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}h1{margin:28px 0 0;font-size:clamp(4.2rem,10vw,8.8rem);line-height:.88;letter-spacing:-.075em;font-weight:650;max-width:1020px}h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.36)}.hero p{margin:34px 0 0;max-width:760px;color:#c1c9d3;font-size:clamp(1.15rem,2vw,1.43rem);letter-spacing:-.02em}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:999px;border:1px solid var(--line);transition:.25s ease}.btn:hover{transform:translateY(-2px)}.primary{background:#fff;color:#07080b;border-color:transparent}.secondary{background:rgba(255,255,255,.035)}.byline{margin-top:58px;color:var(--muted);font-size:.88rem}
+section{padding:120px 0}.head{display:grid;grid-template-columns:.65fr 1.5fr;gap:70px;margin-bottom:58px}.index{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.17em;padding-top:10px}h2{margin:0;font-size:clamp(2.8rem,6vw,5.8rem);line-height:.98;letter-spacing:-.06em;font-weight:600}.lead{margin:26px 0 0;color:#b5bec8;font-size:1.18rem;max-width:790px}.statement{font-size:clamp(2.15rem,4.8vw,4.7rem);line-height:1.06;letter-spacing:-.055em;max-width:1060px;margin:0}.dim{color:#68727f}
+.platform{border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));padding:34px;overflow:hidden}.diagram{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;min-height:410px}.side{display:grid;gap:12px}.node{padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);color:#c6ced8}.core{width:230px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:1.3rem;font-weight:650;letter-spacing:-.04em;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.22),transparent 22%),radial-gradient(circle,rgba(132,187,255,.14),rgba(126,98,255,.06) 60%,transparent 70%);border:1px solid rgba(196,221,255,.28);box-shadow:0 0 90px rgba(101,151,255,.12)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:235px;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.card small{color:var(--muted);letter-spacing:.14em;text-transform:uppercase}.card h3{margin:42px 0 12px;font-size:1.7rem;letter-spacing:-.04em}.card p{margin:0;color:#aab3bf}.apps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.app{min-height:175px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.018)}.app span{color:var(--muted);font-size:.78rem}.app strong{font-size:1.1rem;font-weight:520}.proof{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.proof article{min-height:320px;padding:34px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);display:flex;flex-direction:column;justify-content:space-between}.proof h3{margin:0;font-size:clamp(2rem,4vw,3.8rem);letter-spacing:-.055em;line-height:1}.proof p{color:#aeb7c2}.cta{text-align:center;padding:145px 0}.cta h2{max-width:940px;margin:auto}.cta p{color:#aeb7c2;max-width:720px;margin:26px auto 34px;font-size:1.15rem}footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.88rem}.footerrow{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.navlinks{display:none}.head{grid-template-columns:1fr;gap:18px}.diagram{grid-template-columns:1fr}.core{margin:42px auto}.grid{grid-template-columns:1fr 1fr}.apps{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr}}@media(max-width:620px){.container{width:min(calc(100% - 24px),var(--max))}.grid,.apps{grid-template-columns:1fr}h1{font-size:clamp(4rem,19vw,6rem)}section{padding:88px 0}.actions{flex-direction:column}.btn{width:100%}.platform{padding:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-  <header>
-    <img src="assets/images/logo.png" alt="Hubiot Logo">
-    <h1>Cognitive Secure Innovation</h1>
-    <p>Empowering mission-driven intelligence with design-led security</p>
-  </header>
-
-  <section class="hero">
-    <img src="assets/images/hero-banner.png" alt="Hero Banner">
-  </section>
-
-  <section>
-    <h2>About Hubiot</h2>
-    <p>Hubiot pioneers trusted, real-time intelligence platforms that integrate cognitive automation, secure telemetry, and zero-intrusion design principles. We build technology that adapts at the edge and scales into critical, adversarial environments.</p>
-  </section>
-
-  <section>
-    <h2>Platform Highlights</h2>
-    <p>Our solutions leverage signal intelligence, embedded access, and cryptographic assurance to transform field operations across defense, aerospace, critical infrastructure, and national security domains. All of our innovations are backed by patent filings, modern AI logic, and built-in resilience.</p>
-  </section>
-
-  <section>
-    <h2>Why It Matters</h2>
-    <p>Hubiot enables actionable insights from previously unreachable data sources — reducing latency, increasing mission integrity, and creating cyber-physical visibility in dynamic operating contexts. Our approach integrates research, IP, and deployment into a secure digital continuum.</p>
-  </section>
-<section style="background-color:#0f172a; padding: 30px 20px; border-radius: 8px; color: #67e8f9; font-family: monospace; max-width: 1000px; margin: 40px auto;">
-  <h2 style="font-size: 20px; font-weight: bold; display: flex; align-items: center;">
-    🛡 <span style="margin-left: 10px;">Live Botnet IP Feed</span>
-  </h2>
-  <ul id="threat-feed" style="list-style: none; padding-left: 0; margin-top: 20px;"></ul>
-  <script>
-    fetch('https://corsproxy.io/?https://feodotracker.abuse.ch/downloads/ipblocklist.json')
-      .then(response => response.json())
-      .then(data => {
-        const feed = document.getElementById('threat-feed');
-        const entries = data.slice(0, 5);
-        if (entries.length === 0) throw new Error("No data");
-
-        entries.forEach(entry => {
-          const item = document.createElement('li');
-          item.style.marginBottom = '8px';
-          item.textContent = `IP: ${entry.ip_address} | Malware: ${entry.malware} | Seen: ${entry.first_seen}`;
-          feed.appendChild(item);
-        });
-      })
-      .catch(err => {
-        const fallback = document.createElement('li');
-        fallback.style.color = '#facc15'; // amber/yellow
-        fallback.innerHTML = '⚠️ Unable to load threat data';
-        document.getElementById('threat-feed').appendChild(fallback);
-      });
-  </script>
-</section>
-
-  
-  <div class="cta">
-    <a href="mailto:info@hubiot.com.au">Contact Us</a>
-  </div>
-
-  <footer>
-    &copy; 2025 Hubiot Pty Ltd. Designed for resilience. Powered by intelligence.
-  </footer>
-</body>
-</html>
-<!--redploy-->
+<header><div class="container"><nav><a class="brand" href="#top"><span class="mark"></span><span>IOtronics</span></a><div class="navlinks"><a href="#vision">Vision</a><a href="#platform">Platform</a><a href="#technology">Technology</a><a href="#applications">Applications</a><a href="#research">Research</a></div><a class="navcta" href="#partner">Partner with us</a></nav></div></header>
+<main id="top">
+<section class="hero"><canvas id="field"></canvas><div class="container"><div class="eyebrow">Foundational technology for trusted intelligence</div><h1>Understanding <span>complex digital reality.</span></h1><p>IOtronics creates trusted understanding across complex digital environments—enabling people and intelligent systems to observe, interpret and act with confidence.</p><div class="actions"><a class="btn primary" href="#platform">Explore IOtronics</a><a class="btn secondary" href="#partner">Discuss partnership</a></div><div class="byline">Developed by Hubiot · Western Australia</div></div></section>
+<section id="vision"><div class="container"><div class="head reveal"><div class="index">01 / The Vision</div><div><h2>Intelligence needs a trusted view of reality.</h2><p class="lead">As systems become more distributed, adaptive and autonomous, the ability to understand their true state becomes foundational. IOtronics is being engineered to make that understanding dependable.</p></div></div><p class="statement reveal">The next era will not be defined by intelligence alone. <span class="dim">It will be defined by intelligence grounded in context, continuity and trust.</span></p></div></section>
+<section id="platform"><div class="container"><div class="head reveal"><div class="index">02 / The Platform</div><div><h2>A trusted interaction layer for complex systems.</h2><p class="lead">IOtronics sits between digital reality and intelligent decision-making, transforming system state into trusted, machine-understandable intelligence.</p></div></div><div class="platform reveal"><div class="diagram"><div class="side"><div class="node">Dynamic environments</div><div class="node">Distributed systems</div><div class="node">Machine state</div><div class="node">Operational context</div></div><div class="core">IOtronics<br>Trust Layer</div><div class="side"><div class="node">Trusted understanding</div><div class="node">Contextual intelligence</div><div class="node">Digital continuity</div><div class="node">Confident action</div></div></div></div></div></section>
+<section id="technology"><div class="container"><div class="head reveal"><div class="index">03 / Technology</div><div><h2>From observation to assurance.</h2><p class="lead">A modular technology foundation designed to create a continuous, verifiable understanding of what a system is, how it is changing and what can be trusted.</p></div></div><div class="grid"><article class="card reveal"><small>01</small><h3>Observation</h3><p>Dependable visibility into complex digital environments.</p></article><article class="card reveal"><small>02</small><h3>Context</h3><p>Connecting state, structure and behaviour into coherent understanding.</p></article><article class="card reveal"><small>03</small><h3>Continuity</h3><p>Preserving provenance and integrity across time and change.</p></article><article class="card reveal"><small>04</small><h3>Understanding</h3><p>Representing complexity so people and machines can reason over it.</p></article><article class="card reveal"><small>05</small><h3>Adaptation</h3><p>Supporting informed response as conditions evolve.</p></article><article class="card reveal"><small>06</small><h3>Assurance</h3><p>Enabling decisions grounded in verifiable system knowledge.</p></article></div></div></section>
+<section id="applications"><div class="container"><div class="head reveal"><div class="index">04 / Applications</div><div><h2>Designed for environments where understanding matters.</h2><p class="lead">IOtronics is being developed for high-complexity settings where visibility, trust and continuity are essential to safe and intelligent operation.</p></div></div><div class="apps reveal"><div class="app"><span>01</span><strong>Critical Infrastructure</strong></div><div class="app"><span>02</span><strong>Industrial Systems</strong></div><div class="app"><span>03</span><strong>Autonomous Platforms</strong></div><div class="app"><span>04</span><strong>Defence & Sovereign Capability</strong></div><div class="app"><span>05</span><strong>Enterprise Environments</strong></div><div class="app"><span>06</span><strong>Connected Devices</strong></div><div class="app"><span>07</span><strong>Research & Advanced Engineering</strong></div><div class="app"><span>08</span><strong>Future Digital Infrastructure</strong></div></div></div></section>
+<section id="research"><div class="container"><div class="head reveal"><div class="index">05 / Research</div><div><h2>Original ideas, engineered into reality.</h2><p class="lead">IOtronics emerges from multidisciplinary research and two decades of experience across advanced engineering, intelligent systems and real-world technology environments.</p></div></div><div class="proof"><article class="reveal"><div><small>Protected innovation</small><h3>From research to platform.</h3></div><p>The IOtronics roadmap is supported by an expanding intellectual property portfolio focused on foundational technologies for trusted system understanding.</p></article><article class="reveal"><div><small>Origin</small><h3>Australian deep technology.</h3></div><p>Developed by Hubiot in Western Australia, IOtronics is designed for global collaboration across government, industry, research and strategic investment.</p></article></div></div></section>
+<section class="cta" id="partner"><div class="container reveal"><div class="eyebrow">Build what comes next</div><h2>Partner in creating the next foundation for trusted intelligence.</h2><p>We welcome conversations with government, industry, research institutions, strategic partners and investors aligned with the long-term vision of IOtronics.</p><a class="btn primary" href="mailto:contact@hubiot.com.au">contact@hubiot.com.au</a></div></section>
+</main>
+<footer><div class="container footerrow"><div>© <span id="year"></span> IOtronics. All rights reserved.</div><div>Developed by <strong style="color:#e4e9ef">Hubiot</strong></div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const c=document.getElementById('field'),x=c.getContext('2d');let w,h,p=[];const r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;function z(){const d=Math.min(devicePixelRatio||1,2);w=c.clientWidth;h=c.clientHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);p=Array.from({length:Math.min(90,Math.max(42,Math.floor(w/18)))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18}))}function q(){x.clearRect(0,0,w,h);for(let i=0;i<p.length;i++){const a=p[i];if(!r){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1}x.beginPath();x.arc(a.x,a.y,1.2,0,Math.PI*2);x.fillStyle='rgba(205,226,255,.45)';x.fill();for(let j=i+1;j<p.length;j++){const b=p[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<125){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle=`rgba(150,190,235,${(1-d/125)*.12})`;x.lineWidth=.7;x.stroke()}}}if(!r)requestAnimationFrame(q)}z();q();addEventListener('resize',z);
+</script>
+</body></html>
