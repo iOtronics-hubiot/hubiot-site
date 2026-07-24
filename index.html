@@ -1,36 +1,1145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="IOtronics is a foundational technology platform developed by Hubiot to create trusted understanding across complex digital environments.">
-<meta name="theme-color" content="#05070a">
-<title>IOtronics — Trusted Understanding for Complex Digital Systems</title>
-<style>
-:root{--bg:#05070a;--panel:rgba(255,255,255,.045);--line:rgba(255,255,255,.11);--text:#f5f7fb;--muted:#a6afbc;--accent:#8de7ff;--max:1180px;--radius:24px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:radial-gradient(circle at 50% -10%,rgba(85,155,255,.16),transparent 34%),radial-gradient(circle at 92% 4%,rgba(148,98,255,.12),transparent 26%),var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 40px),var(--max));margin:auto}
-header{position:fixed;inset:0 0 auto;z-index:50;padding:18px 0;background:rgba(5,7,10,.68);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.03em}.mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,#fff,#91ddff 55%,#a492ff);box-shadow:0 0 40px rgba(120,200,255,.25);position:relative}.mark:after{content:"";position:absolute;inset:8px;border:1px solid #071017;border-radius:4px;transform:rotate(45deg)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.navcta{border:1px solid var(--line);padding:10px 15px;border-radius:999px}
-.hero{min-height:100vh;display:grid;align-items:center;padding:150px 0 90px;position:relative;isolation:isolate}#field{position:absolute;inset:0;width:100%;height:100%;z-index:-2;opacity:.58}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(5,7,10,.16),rgba(5,7,10,.35) 58%,var(--bg))}.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;color:#d6e7ef}.eyebrow:before{content:"";width:38px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}h1{margin:28px 0 0;font-size:clamp(4.2rem,10vw,8.8rem);line-height:.88;letter-spacing:-.075em;font-weight:650;max-width:1020px}h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.36)}.hero p{margin:34px 0 0;max-width:760px;color:#c1c9d3;font-size:clamp(1.15rem,2vw,1.43rem);letter-spacing:-.02em}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:999px;border:1px solid var(--line);transition:.25s ease}.btn:hover{transform:translateY(-2px)}.primary{background:#fff;color:#07080b;border-color:transparent}.secondary{background:rgba(255,255,255,.035)}.byline{margin-top:58px;color:var(--muted);font-size:.88rem}
-section{padding:120px 0}.head{display:grid;grid-template-columns:.65fr 1.5fr;gap:70px;margin-bottom:58px}.index{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.17em;padding-top:10px}h2{margin:0;font-size:clamp(2.8rem,6vw,5.8rem);line-height:.98;letter-spacing:-.06em;font-weight:600}.lead{margin:26px 0 0;color:#b5bec8;font-size:1.18rem;max-width:790px}.statement{font-size:clamp(2.15rem,4.8vw,4.7rem);line-height:1.06;letter-spacing:-.055em;max-width:1060px;margin:0}.dim{color:#68727f}
-.platform{border:1px solid var(--line);border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));padding:34px;overflow:hidden}.diagram{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;min-height:410px}.side{display:grid;gap:12px}.node{padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);color:#c6ced8}.core{width:230px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:1.3rem;font-weight:650;letter-spacing:-.04em;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.22),transparent 22%),radial-gradient(circle,rgba(132,187,255,.14),rgba(126,98,255,.06) 60%,transparent 70%);border:1px solid rgba(196,221,255,.28);box-shadow:0 0 90px rgba(101,151,255,.12)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:235px;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.card small{color:var(--muted);letter-spacing:.14em;text-transform:uppercase}.card h3{margin:42px 0 12px;font-size:1.7rem;letter-spacing:-.04em}.card p{margin:0;color:#aab3bf}.apps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.app{min-height:175px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.018)}.app span{color:var(--muted);font-size:.78rem}.app strong{font-size:1.1rem;font-weight:520}.proof{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.proof article{min-height:320px;padding:34px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);display:flex;flex-direction:column;justify-content:space-between}.proof h3{margin:0;font-size:clamp(2rem,4vw,3.8rem);letter-spacing:-.055em;line-height:1}.proof p{color:#aeb7c2}.cta{text-align:center;padding:145px 0}.cta h2{max-width:940px;margin:auto}.cta p{color:#aeb7c2;max-width:720px;margin:26px auto 34px;font-size:1.15rem}footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.88rem}.footerrow{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){.navlinks{display:none}.head{grid-template-columns:1fr;gap:18px}.diagram{grid-template-columns:1fr}.core{margin:42px auto}.grid{grid-template-columns:1fr 1fr}.apps{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr}}@media(max-width:620px){.container{width:min(calc(100% - 24px),var(--max))}.grid,.apps{grid-template-columns:1fr}h1{font-size:clamp(4rem,19vw,6rem)}section{padding:88px 0}.actions{flex-direction:column}.btn{width:100%}.platform{padding:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05060a" />
+  <meta name="description" content="IOtronics is a deep-technology platform developed by Hubiot for high-fidelity acquisition, computational representation and intelligent analysis of modern digital environments." />
+  <meta property="og:title" content="IOtronics — Advanced Digital Interaction" />
+  <meta property="og:description" content="A new technology platform for acquisition, computational representation and intelligent analysis." />
+  <meta property="og:type" content="website" />
+  <title>IOtronics — Advanced Digital Interaction</title>
+
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-soft: #0a0d14;
+      --panel: rgba(15, 19, 30, 0.72);
+      --panel-strong: rgba(17, 22, 34, 0.94);
+      --line: rgba(255,255,255,0.11);
+      --line-strong: rgba(255,255,255,0.18);
+      --text: #f4f7fb;
+      --muted: #9aa7b8;
+      --muted-2: #6d7888;
+      --accent: #82f0ff;
+      --accent-2: #8b8cff;
+      --accent-3: #c493ff;
+      --max: 1240px;
+      --radius: 28px;
+      --shadow: 0 40px 120px rgba(0,0,0,.45);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 10%, rgba(76, 118, 255, 0.12), transparent 34%),
+        radial-gradient(circle at 88% 16%, rgba(130, 240, 255, 0.08), transparent 26%),
+        linear-gradient(180deg, #05060a 0%, #070912 42%, #05060a 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .22;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 78%);
+      z-index: -1;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img, svg { display: block; max-width: 100%; }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #bdc7d7;
+      font-weight: 700;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5,6,10,.86), rgba(5,6,10,.36));
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      transition: background .3s ease, border-color .3s ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(5,6,10,.88);
+      border-color: rgba(255,255,255,.09);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      font-weight: 750;
+      letter-spacing: -.02em;
+      font-size: 20px;
+    }
+
+    .brand-mark {
+      width: 36px;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      position: relative;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255,255,255,.96) 0 4%, transparent 5%),
+        conic-gradient(from 170deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+      box-shadow: 0 0 42px rgba(130,240,255,.18);
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border-radius: 8px;
+      background: #070910;
+      border: 1px solid rgba(255,255,255,.24);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: #c8d0dd;
+      font-size: 14px;
+    }
+
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: white; }
+
+    .nav-cta {
+      padding: 11px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: rgba(255,255,255,.04);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      color: white;
+      background: rgba(255,255,255,.035);
+      border-radius: 14px;
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      align-items: center;
+      padding: 132px 0 70px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: clamp(40px, 6vw, 86px);
+      align-items: center;
+    }
+
+    .hero-copy { position: relative; z-index: 2; }
+
+    .hero h1 {
+      margin: 24px 0 22px;
+      font-size: clamp(54px, 8vw, 112px);
+      line-height: .9;
+      letter-spacing: -.072em;
+      max-width: 900px;
+      text-wrap: balance;
+    }
+
+    .hero h1 .outline {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(244,247,251,.52);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 650px;
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.58;
+      color: #b7c1cf;
+      letter-spacing: -.015em;
+    }
+
+    .hero-actions {
+      margin-top: 38px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: #031014;
+      background: linear-gradient(135deg, #d8fbff, var(--accent));
+      box-shadow: 0 12px 36px rgba(130,240,255,.15);
+    }
+
+    .btn-secondary {
+      border-color: var(--line-strong);
+      background: rgba(255,255,255,.035);
+      color: #edf2f8;
+    }
+
+    .hero-note {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted-2);
+      font-size: 13px;
+    }
+
+    .hero-note span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 14px var(--accent);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 660px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbital-frame {
+      position: relative;
+      width: min(100%, 630px);
+      aspect-ratio: 1;
+      filter: drop-shadow(0 40px 120px rgba(0,0,0,.46));
+    }
+
+    .orbital-frame::before,
+    .orbital-frame::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .orbital-frame::before {
+      inset: 13%;
+      background: radial-gradient(circle at 42% 38%, rgba(255,255,255,.2), rgba(137,142,255,.14) 28%, rgba(35,45,76,.2) 48%, rgba(5,6,10,0) 72%);
+      filter: blur(8px);
+    }
+
+    .orbital-frame::after {
+      inset: 25%;
+      border: 1px solid rgba(130,240,255,.18);
+      box-shadow: 0 0 70px rgba(130,240,255,.09) inset;
+    }
+
+    #heroCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .visual-card {
+      position: absolute;
+      z-index: 2;
+      padding: 16px 18px;
+      min-width: 180px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(20,26,40,.78), rgba(8,11,18,.68));
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 70px rgba(0,0,0,.35);
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .visual-card small {
+      display: block;
+      color: var(--muted-2);
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .visual-card strong { font-size: 14px; }
+    .vc-1 { top: 14%; left: 2%; }
+    .vc-2 { right: 0; top: 32%; animation-delay: -2.2s; }
+    .vc-3 { left: 12%; bottom: 9%; animation-delay: -4.1s; }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .trust-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.018);
+    }
+
+    .trust-grid {
+      min-height: 110px;
+      display: grid;
+      grid-template-columns: 1.2fr repeat(4, 1fr);
+      align-items: center;
+      gap: 22px;
+    }
+
+    .trust-grid > div:not(:first-child) {
+      color: #8490a0;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    section { padding: 132px 0; position: relative; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+      align-items: end;
+      margin-bottom: 70px;
+    }
+
+    .section-head h2 {
+      margin: 14px 0 0;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      max-width: 780px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.68;
+      max-width: 620px;
+    }
+
+    .manifesto {
+      overflow: hidden;
+    }
+
+    .manifesto::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -190px;
+      top: 10%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,140,255,.14), transparent 65%);
+      filter: blur(24px);
+    }
+
+    .manifesto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+    }
+
+    .statement {
+      min-height: 520px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.012));
+      padding: clamp(28px, 5vw, 62px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .statement h3 {
+      margin: 0;
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: .98;
+      letter-spacing: -.05em;
+      max-width: 520px;
+    }
+
+    .statement p {
+      margin: 28px 0 0;
+      color: #aeb9c8;
+      font-size: 18px;
+      line-height: 1.65;
+      max-width: 520px;
+    }
+
+    .statement .metric {
+      position: absolute;
+      left: 54px;
+      bottom: 46px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .statement .metric strong {
+      font-size: clamp(46px, 6vw, 82px);
+      letter-spacing: -.06em;
+      font-weight: 620;
+    }
+
+    .statement .metric span {
+      color: var(--muted-2);
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .signal-field {
+      position: absolute;
+      inset: auto -10% -22% 30%;
+      height: 62%;
+      opacity: .8;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .platform-card {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(160deg, rgba(255,255,255,.055), rgba(255,255,255,.012));
+      padding: 30px;
+      min-height: 320px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s ease, border-color .3s ease, background .3s ease;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(130,240,255,.28);
+      background: linear-gradient(160deg, rgba(130,240,255,.07), rgba(255,255,255,.015));
+    }
+
+    .platform-card:nth-child(1), .platform-card:nth-child(4) { grid-column: span 7; }
+    .platform-card:nth-child(2), .platform-card:nth-child(3) { grid-column: span 5; }
+    .platform-card:nth-child(5) { grid-column: span 12; min-height: 360px; }
+
+    .card-num {
+      font-size: 11px;
+      letter-spacing: .16em;
+      color: var(--muted-2);
+    }
+
+    .platform-card h3 {
+      margin: 66px 0 14px;
+      font-size: clamp(28px, 3vw, 42px);
+      letter-spacing: -.04em;
+      max-width: 520px;
+    }
+
+    .platform-card p {
+      margin: 0;
+      max-width: 580px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .chip-visual {
+      position: absolute;
+      right: 22px;
+      bottom: 12px;
+      width: 46%;
+      opacity: .52;
+    }
+
+    .applications {
+      background: linear-gradient(180deg, transparent, rgba(255,255,255,.015), transparent);
+    }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .app-card {
+      min-height: 260px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      padding: 26px;
+      background: rgba(255,255,255,.018);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-card::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      right: -50px;
+      bottom: -60px;
+      background: radial-gradient(circle, rgba(130,240,255,.14), transparent 68%);
+      transition: transform .3s ease;
+    }
+
+    .app-card:hover::after { transform: scale(1.35); }
+
+    .app-card h3 { margin: 74px 0 10px; font-size: 23px; letter-spacing: -.025em; }
+    .app-card p { margin: 0; color: var(--muted); line-height: 1.58; font-size: 15px; }
+
+    .roadmap {
+      overflow: hidden;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      position: relative;
+      padding-top: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 43px;
+      left: 9%;
+      right: 9%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(130,240,255,.5), rgba(139,140,255,.5), transparent);
+    }
+
+    .phase { position: relative; padding: 0 16px; }
+    .phase-dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(130,240,255,.44);
+      background: #080b12;
+      box-shadow: 0 0 30px rgba(130,240,255,.08);
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+      font-size: 12px;
+      color: #d7faff;
+    }
+
+    .phase h3 { margin: 0 0 10px; font-size: 20px; }
+    .phase p { margin: 0; color: var(--muted); line-height: 1.55; font-size: 14px; }
+
+    .commercial-panel {
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(130,240,255,.09), transparent 28%),
+        linear-gradient(145deg, rgba(255,255,255,.052), rgba(255,255,255,.012));
+      padding: clamp(32px, 5vw, 68px);
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      box-shadow: var(--shadow);
+    }
+
+    .commercial-panel h2 {
+      margin: 16px 0 0;
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 1;
+      letter-spacing: -.05em;
+    }
+
+    .commercial-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .commercial-item {
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.026);
+      color: #d3dae5;
+      font-size: 14px;
+    }
+
+    .cta {
+      padding-top: 40px;
+    }
+
+    .cta-panel {
+      min-height: 460px;
+      border-radius: 38px;
+      border: 1px solid rgba(255,255,255,.13);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(139,140,255,.16), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+    }
+
+    .cta-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .45;
+      background-image:
+        radial-gradient(circle at center, rgba(130,240,255,.5) 0 1px, transparent 1.5px);
+      background-size: 28px 28px;
+      mask-image: radial-gradient(circle at center, black, transparent 70%);
+    }
+
+    .cta-content { position: relative; z-index: 2; max-width: 820px; }
+    .cta-content h2 {
+      margin: 18px 0;
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: .95;
+      letter-spacing: -.06em;
+    }
+    .cta-content p { margin: 0 auto 30px; color: var(--muted); font-size: 18px; line-height: 1.65; max-width: 650px; }
+
+    footer {
+      padding: 42px 0 54px;
+      color: var(--muted-2);
+      font-size: 13px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 30px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1020px) {
+      .hero-grid, .section-head, .manifesto-grid, .commercial-panel { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 520px; }
+      .trust-grid { grid-template-columns: 1fr 1fr; padding: 28px 0; }
+      .trust-grid > div:first-child { grid-column: span 2; }
+      .app-grid { grid-template-columns: 1fr 1fr; }
+      .timeline { grid-template-columns: 1fr; gap: 28px; }
+      .timeline::before { left: 18px; top: 24px; bottom: 24px; width: 1px; height: auto; right: auto; }
+      .phase { padding-left: 62px; }
+      .phase-dot { position: absolute; left: 0; top: 0; }
+    }
+
+    @media (max-width: 820px) {
+      .nav-links {
+        position: fixed;
+        inset: 76px 16px auto;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: rgba(8,10,16,.97);
+        padding: 22px;
+        flex-direction: column;
+        align-items: stretch;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+        transition: .25s ease;
+      }
+      .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+      .menu-toggle { display: grid; place-items: center; }
+      .platform-card, .platform-card:nth-child(n) { grid-column: span 12; }
+      .hero h1 { letter-spacing: -.058em; }
+      .visual-card { display: none; }
+      .commercial-list { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(calc(100% - 24px), var(--max)); }
+      .hero { padding-top: 110px; }
+      .hero-visual { min-height: 390px; }
+      .orbital-frame { width: 112%; }
+      section { padding: 92px 0; }
+      .statement { min-height: 440px; padding: 30px; }
+      .statement .metric { left: 30px; bottom: 30px; }
+      .app-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: 1fr; }
+      .trust-grid > div:first-child { grid-column: auto; }
+      .trust-grid > div:not(:first-child) { text-align: left; }
+      .footer-grid { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition-duration: .001ms !important; }
+    }
+  </style>
 </head>
 <body>
-<header><div class="container"><nav><a class="brand" href="#top"><span class="mark"></span><span>IOtronics</span></a><div class="navlinks"><a href="#vision">Vision</a><a href="#platform">Platform</a><a href="#technology">Technology</a><a href="#applications">Applications</a><a href="#research">Research</a></div><a class="navcta" href="#partner">Partner with us</a></nav></div></header>
-<main id="top">
-<section class="hero"><canvas id="field"></canvas><div class="container"><div class="eyebrow">Foundational technology for trusted intelligence</div><h1>Understanding <span>complex digital reality.</span></h1><p>IOtronics creates trusted understanding across complex digital environments—enabling people and intelligent systems to observe, interpret and act with confidence.</p><div class="actions"><a class="btn primary" href="#platform">Explore IOtronics</a><a class="btn secondary" href="#partner">Discuss partnership</a></div><div class="byline">Developed by Hubiot · Western Australia</div></div></section>
-<section id="vision"><div class="container"><div class="head reveal"><div class="index">01 / The Vision</div><div><h2>Intelligence needs a trusted view of reality.</h2><p class="lead">As systems become more distributed, adaptive and autonomous, the ability to understand their true state becomes foundational. IOtronics is being engineered to make that understanding dependable.</p></div></div><p class="statement reveal">The next era will not be defined by intelligence alone. <span class="dim">It will be defined by intelligence grounded in context, continuity and trust.</span></p></div></section>
-<section id="platform"><div class="container"><div class="head reveal"><div class="index">02 / The Platform</div><div><h2>A trusted interaction layer for complex systems.</h2><p class="lead">IOtronics sits between digital reality and intelligent decision-making, transforming system state into trusted, machine-understandable intelligence.</p></div></div><div class="platform reveal"><div class="diagram"><div class="side"><div class="node">Dynamic environments</div><div class="node">Distributed systems</div><div class="node">Machine state</div><div class="node">Operational context</div></div><div class="core">IOtronics<br>Trust Layer</div><div class="side"><div class="node">Trusted understanding</div><div class="node">Contextual intelligence</div><div class="node">Digital continuity</div><div class="node">Confident action</div></div></div></div></div></section>
-<section id="technology"><div class="container"><div class="head reveal"><div class="index">03 / Technology</div><div><h2>From observation to assurance.</h2><p class="lead">A modular technology foundation designed to create a continuous, verifiable understanding of what a system is, how it is changing and what can be trusted.</p></div></div><div class="grid"><article class="card reveal"><small>01</small><h3>Observation</h3><p>Dependable visibility into complex digital environments.</p></article><article class="card reveal"><small>02</small><h3>Context</h3><p>Connecting state, structure and behaviour into coherent understanding.</p></article><article class="card reveal"><small>03</small><h3>Continuity</h3><p>Preserving provenance and integrity across time and change.</p></article><article class="card reveal"><small>04</small><h3>Understanding</h3><p>Representing complexity so people and machines can reason over it.</p></article><article class="card reveal"><small>05</small><h3>Adaptation</h3><p>Supporting informed response as conditions evolve.</p></article><article class="card reveal"><small>06</small><h3>Assurance</h3><p>Enabling decisions grounded in verifiable system knowledge.</p></article></div></div></section>
-<section id="applications"><div class="container"><div class="head reveal"><div class="index">04 / Applications</div><div><h2>Designed for environments where understanding matters.</h2><p class="lead">IOtronics is being developed for high-complexity settings where visibility, trust and continuity are essential to safe and intelligent operation.</p></div></div><div class="apps reveal"><div class="app"><span>01</span><strong>Critical Infrastructure</strong></div><div class="app"><span>02</span><strong>Industrial Systems</strong></div><div class="app"><span>03</span><strong>Autonomous Platforms</strong></div><div class="app"><span>04</span><strong>Defence & Sovereign Capability</strong></div><div class="app"><span>05</span><strong>Enterprise Environments</strong></div><div class="app"><span>06</span><strong>Connected Devices</strong></div><div class="app"><span>07</span><strong>Research & Advanced Engineering</strong></div><div class="app"><span>08</span><strong>Future Digital Infrastructure</strong></div></div></div></section>
-<section id="research"><div class="container"><div class="head reveal"><div class="index">05 / Research</div><div><h2>Original ideas, engineered into reality.</h2><p class="lead">IOtronics emerges from multidisciplinary research and two decades of experience across advanced engineering, intelligent systems and real-world technology environments.</p></div></div><div class="proof"><article class="reveal"><div><small>Protected innovation</small><h3>From research to platform.</h3></div><p>The IOtronics roadmap is supported by an expanding intellectual property portfolio focused on foundational technologies for trusted system understanding.</p></article><article class="reveal"><div><small>Origin</small><h3>Australian deep technology.</h3></div><p>Developed by Hubiot in Western Australia, IOtronics is designed for global collaboration across government, industry, research and strategic investment.</p></article></div></div></section>
-<section class="cta" id="partner"><div class="container reveal"><div class="eyebrow">Build what comes next</div><h2>Partner in creating the next foundation for trusted intelligence.</h2><p>We welcome conversations with government, industry, research institutions, strategic partners and investors aligned with the long-term vision of IOtronics.</p><a class="btn primary" href="mailto:contact@hubiot.com.au">contact@hubiot.com.au</a></div></section>
-</main>
-<footer><div class="container footerrow"><div>© <span id="year"></span> IOtronics. All rights reserved.</div><div>Developed by <strong style="color:#e4e9ef">Hubiot</strong></div></div></footer>
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const c=document.getElementById('field'),x=c.getContext('2d');let w,h,p=[];const r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;function z(){const d=Math.min(devicePixelRatio||1,2);w=c.clientWidth;h=c.clientHeight;c.width=w*d;c.height=h*d;x.setTransform(d,0,0,d,0,0);p=Array.from({length:Math.min(90,Math.max(42,Math.floor(w/18)))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18}))}function q(){x.clearRect(0,0,w,h);for(let i=0;i<p.length;i++){const a=p[i];if(!r){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1}x.beginPath();x.arc(a.x,a.y,1.2,0,Math.PI*2);x.fillStyle='rgba(205,226,255,.45)';x.fill();for(let j=i+1;j<p.length;j++){const b=p[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<125){x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.strokeStyle=`rgba(150,190,235,${(1-d/125)*.12})`;x.lineWidth=.7;x.stroke()}}}if(!r)requestAnimationFrame(q)}z();q();addEventListener('resize',z);
-</script>
-</body></html>
+  <header class="site-header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="IOtronics home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>IOtronics</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#vision">Vision</a>
+        <a href="#platform">Platform</a>
+        <a href="#applications">Applications</a>
+        <a href="#roadmap">Research</a>
+        <a class="nav-cta" href="#contact">Partner with Hubiot</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal visible">
+          <span class="eyebrow">Developed by Hubiot · Western Australia</span>
+          <h1>Advancing digital <span class="outline">interaction.</span></h1>
+          <p>
+            IOtronics is a deep-technology platform for high-fidelity acquisition,
+            computational representation and intelligent analysis across modern devices,
+            infrastructure and machine environments.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#platform">Explore the platform <span>↗</span></a>
+            <a class="btn btn-secondary" href="#contact">Discuss collaboration</a>
+          </div>
+          <div class="hero-note"><span></span> Research-led technology with an active international patent strategy.</div>
+        </div>
+
+        <div class="hero-visual reveal visible" aria-hidden="true">
+          <div class="orbital-frame">
+            <canvas id="heroCanvas"></canvas>
+            <div class="visual-card vc-1"><small>Acquisition</small><strong>Physical memory interaction</strong></div>
+            <div class="visual-card vc-2"><small>Representation</small><strong>Digital twin generation</strong></div>
+            <div class="visual-card vc-3"><small>Analysis</small><strong>AI-assisted investigation</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="eyebrow">Built for high-consequence environments</div>
+        <div>Forensics</div>
+        <div>Critical Infrastructure</div>
+        <div>Defence</div>
+        <div>Advanced Computing</div>
+      </div>
+    </div>
+
+    <section class="manifesto" id="vision">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Why IOtronics</span>
+            <h2>Computing has outgrown its original interfaces.</h2>
+          </div>
+          <p>
+            Modern devices conceal increasingly sophisticated memory structures, embedded logic and software-defined behaviour.
+            Conventional acquisition and analysis methods were not designed for this scale of diversity, volatility or operational sensitivity.
+          </p>
+        </div>
+
+        <div class="manifesto-grid">
+          <article class="statement reveal">
+            <h3>Move beyond extraction.</h3>
+            <p>
+              IOtronics is designed to interact with digital information at a deeper architectural layer—preserving fidelity,
+              reducing intervention and producing richer representations for analysis.
+            </p>
+            <div class="metric"><strong>01</strong><span>Architecture before abstraction</span></div>
+            <svg class="signal-field" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 170C70 170 65 60 140 60C215 60 205 230 290 230C375 230 365 98 455 98C535 98 535 170 600 170" stroke="url(#g1)" stroke-width="2"/>
+              <path d="M0 215C80 215 75 130 150 130C225 130 240 260 320 260C400 260 408 155 480 155C552 155 555 215 600 215" stroke="url(#g2)" stroke-width="1" opacity=".6"/>
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="600" y2="0"><stop stop-color="#82F0FF" stop-opacity="0"/><stop offset=".5" stop-color="#82F0FF"/><stop offset="1" stop-color="#8B8CFF" stop-opacity="0"/></linearGradient>
+                <linearGradient id="g2" x1="0" y1="0" x2="600" y2="0"><stop stop-color="#8B8CFF" stop-opacity="0"/><stop offset=".5" stop-color="#C493FF"/><stop offset="1" stop-color="#82F0FF" stop-opacity="0"/></linearGradient>
+              </defs>
+            </svg>
+          </article>
+
+          <article class="statement reveal">
+            <h3>Prepare information for machine reasoning.</h3>
+            <p>
+              The platform is intended to convert low-level acquired data into structured computational representations that support digital twins,
+              investigative workflows and future AI-assisted analysis.
+            </p>
+            <div class="metric"><strong>02</strong><span>From signal to representation</span></div>
+            <svg class="signal-field" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g opacity=".75">
+                <circle cx="80" cy="150" r="4" fill="#82F0FF"/><circle cx="180" cy="90" r="4" fill="#8B8CFF"/><circle cx="180" cy="210" r="4" fill="#C493FF"/>
+                <circle cx="305" cy="150" r="6" fill="#fff"/><circle cx="430" cy="80" r="4" fill="#82F0FF"/><circle cx="470" cy="210" r="4" fill="#8B8CFF"/><circle cx="555" cy="150" r="4" fill="#C493FF"/>
+                <path d="M84 148L176 92M84 152L176 208M184 92L301 147M184 208L301 153M311 147L426 82M311 153L466 208M434 82L551 147M474 208L551 153" stroke="url(#g3)"/>
+              </g>
+              <defs><linearGradient id="g3" x1="80" y1="80" x2="555" y2="210"><stop stop-color="#82F0FF"/><stop offset=".52" stop-color="#fff"/><stop offset="1" stop-color="#8B8CFF"/></linearGradient></defs>
+            </svg>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">The platform</span>
+            <h2>One architecture. Multiple technology layers.</h2>
+          </div>
+          <p>
+            IOtronics extends the original Mantle Labs concept into a broader platform spanning acquisition hardware,
+            computational modelling, intelligent analysis and future purpose-built silicon.
+          </p>
+        </div>
+
+        <div class="platform-grid">
+          <article class="platform-card reveal">
+            <span class="card-num">01 / ACQUISITION</span>
+            <h3>High-fidelity acquisition architecture</h3>
+            <p>Hardware-assisted methods intended to acquire information from modern memory architectures while minimising disruption to the source environment.</p>
+            <svg class="chip-visual" viewBox="0 0 420 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="90" y="30" width="240" height="160" rx="20" stroke="#82F0FF" stroke-opacity=".45"/>
+              <rect x="126" y="64" width="168" height="92" rx="12" stroke="#8B8CFF" stroke-opacity=".6"/>
+              <path d="M0 76H90M0 110H90M0 144H90M330 76H420M330 110H420M330 144H420M148 0V64M210 0V64M272 0V64M148 156V220M210 156V220M272 156V220" stroke="#82F0FF" stroke-opacity=".35"/>
+            </svg>
+          </article>
+
+          <article class="platform-card reveal">
+            <span class="card-num">02 / RECONFIGURABLE HARDWARE</span>
+            <h3>Adaptable embedded logic</h3>
+            <p>Programmable architectures provide a pathway for supporting diverse devices, interfaces and evolving memory technologies.</p>
+          </article>
+
+          <article class="platform-card reveal">
+            <span class="card-num">03 / COMPUTATIONAL REPRESENTATION</span>
+            <h3>Digital twin generation</h3>
+            <p>Transform acquired information into structured representations suitable for reconstruction, simulation and advanced investigative analysis.</p>
+          </article>
+
+          <article class="platform-card reveal">
+            <span class="card-num">04 / COGNITIVE ANALYSIS</span>
+            <h3>AI-assisted investigation</h3>
+            <p>Support analysts by correlating acquired artefacts, reconstructing activity and surfacing meaningful relationships across large evidence sets.</p>
+          </article>
+
+          <article class="platform-card reveal">
+            <span class="card-num">05 / FUTURE SILICON</span>
+            <h3>Purpose-built ASIC architecture</h3>
+            <p>A long-term pathway toward specialised silicon that brings acquisition, transformation and analysis closer to the physical source of digital information.</p>
+            <svg class="chip-visual" style="width:34%;right:5%;bottom:2%;" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="url(#asic)" stroke-opacity=".65">
+                <path d="M30 40H470V260H30z"/><path d="M70 75H430V225H70z"/><path d="M110 105H390V195H110z"/>
+                <path d="M150 0V105M250 0V105M350 0V105M150 195V300M250 195V300M350 195V300M0 90H110M0 150H110M0 210H110M390 90H500M390 150H500M390 210H500"/>
+              </g>
+              <defs><linearGradient id="asic" x1="30" y1="40" x2="470" y2="260"><stop stop-color="#82F0FF"/><stop offset="1" stop-color="#8B8CFF"/></linearGradient></defs>
+            </svg>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="applications" id="applications">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Application domains</span>
+            <h2>Designed for environments where fidelity matters.</h2>
+          </div>
+          <p>
+            The first commercial pathway remains advanced digital forensics. The underlying architecture also creates future opportunities across defence,
+            cyber resilience, infrastructure assurance, semiconductor research and autonomous technologies.
+          </p>
+        </div>
+
+        <div class="app-grid">
+          <article class="app-card reveal"><span class="card-num">01</span><h3>Digital Forensics</h3><p>Non-intrusive acquisition and analysis for modern devices and emerging memory architectures.</p></article>
+          <article class="app-card reveal"><span class="card-num">02</span><h3>Cyber Incident Response</h3><p>Accelerated acquisition and reconstruction during the critical early stages of an incident.</p></article>
+          <article class="app-card reveal"><span class="card-num">03</span><h3>Critical Infrastructure</h3><p>Evidence preservation and technical analysis across operationally sensitive environments.</p></article>
+          <article class="app-card reveal"><span class="card-num">04</span><h3>Defence & National Security</h3><p>Advanced capability for high-consequence and mission-sensitive investigative contexts.</p></article>
+          <article class="app-card reveal"><span class="card-num">05</span><h3>Semiconductor Research</h3><p>Low-level interaction with next-generation memory and embedded device architectures.</p></article>
+          <article class="app-card reveal"><span class="card-num">06</span><h3>Digital Twins</h3><p>Faithful computational representations to support reconstruction, modelling and simulation.</p></article>
+          <article class="app-card reveal"><span class="card-num">07</span><h3>Autonomous Technologies</h3><p>Machine-usable information structures for systems that must interpret changing environments.</p></article>
+          <article class="app-card reveal"><span class="card-num">08</span><h3>Industrial Systems</h3><p>Specialised acquisition and analysis across embedded, connected and cyber-physical assets.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap" id="roadmap">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Research roadmap</span>
+            <h2>A multi-generation technology strategy.</h2>
+          </div>
+          <p>
+            IOtronics is structured as a sequence of distinct research and intellectual-property programs, each extending the platform while protecting a separate inventive concept.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="phase reveal"><div class="phase-dot">01</div><h3>Acquisition Engine</h3><p>Reconfigurable control, direct memory interaction and read-only forensic acquisition.</p></article>
+          <article class="phase reveal"><div class="phase-dot">02</div><h3>Wireless Architecture</h3><p>New interaction methods that reduce dependence on conventional physical access models.</p></article>
+          <article class="phase reveal"><div class="phase-dot">03</div><h3>Forensic Digital Twin</h3><p>Computational reconstruction of acquired environments for repeatable analysis.</p></article>
+          <article class="phase reveal"><div class="phase-dot">04</div><h3>Cognitive DFIR</h3><p>AI-assisted correlation, hypothesis generation and investigative reasoning.</p></article>
+          <article class="phase reveal"><div class="phase-dot">05</div><h3>ASIC Probe Platform</h3><p>Purpose-built silicon for compact, scalable and high-performance implementation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container commercial-panel reveal">
+        <div>
+          <span class="eyebrow">Commercialisation</span>
+          <h2>Research-led. Partnership-driven.</h2>
+        </div>
+        <div class="commercial-list">
+          <div class="commercial-item">Government-funded R&D trials</div>
+          <div class="commercial-item">Defence and national-security collaboration</div>
+          <div class="commercial-item">Strategic industry partnerships</div>
+          <div class="commercial-item">OEM and platform licensing</div>
+          <div class="commercial-item">Australian advanced manufacturing</div>
+          <div class="commercial-item">International AUKUS and Five Eyes markets</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-panel reveal">
+        <div class="cta-content">
+          <span class="eyebrow">Partner with Hubiot</span>
+          <h2>Build the next generation with us.</h2>
+          <p>
+            Hubiot is seeking research, government, defence, investment and technology partners to accelerate prototyping,
+            operational trials and commercialisation of the IOtronics platform.
+          </p>
+          <a class="btn btn-primary" href="mailto:contact@hubiot.com.au">contact@hubiot.com.au <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> Hubiot Pty Ltd. IOtronics is developed in Western Australia.</div>
+      <div>Deep technology · Advanced acquisition · Intelligent analysis</div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 18);
+    });
+
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = `${Math.min(i * 55, 220)}ms`;
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObserver.observe(el));
+
+    // Generative hero visual: a rotating computational lattice.
+    const canvas = document.getElementById('heroCanvas');
+    const ctx = canvas.getContext('2d');
+    const points = [];
+    const rings = 6;
+    const pointsPerRing = 18;
+    let width = 0, height = 0, dpr = 1, t = 0;
+
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = rect.width;
+      height = rect.height;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function buildPoints() {
+      points.length = 0;
+      for (let r = 1; r <= rings; r++) {
+        for (let i = 0; i < pointsPerRing; i++) {
+          points.push({
+            ring: r,
+            a: (i / pointsPerRing) * Math.PI * 2 + (r % 2) * .12,
+            z: (Math.random() - .5) * 1.25,
+            phase: Math.random() * Math.PI * 2,
+          });
+        }
+      }
+    }
+
+    function draw() {
+      t += .006;
+      ctx.clearRect(0, 0, width, height);
+      const cx = width / 2;
+      const cy = height / 2;
+      const radius = Math.min(width, height) * .39;
+      const projected = points.map(p => {
+        const rr = radius * (p.ring / rings);
+        const wobble = 1 + Math.sin(t * 2 + p.phase) * .025;
+        const x3 = Math.cos(p.a + t * (0.18 + p.ring * .015)) * rr * wobble;
+        const y3 = Math.sin(p.a + t * (0.15 + p.ring * .012)) * rr * .66;
+        const z3 = Math.sin(p.a * 2 + t * 1.5 + p.phase) * 42 + p.z * 24;
+        const scale = 1 + z3 / 420;
+        return { x: cx + x3 * scale, y: cy + y3 * scale, z: z3, ring: p.ring };
+      });
+
+      ctx.save();
+      ctx.globalCompositeOperation = 'lighter';
+
+      // Rings
+      for (let r = 1; r <= rings; r++) {
+        const ringPts = projected.filter(p => p.ring === r);
+        ctx.beginPath();
+        ringPts.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y));
+        ctx.closePath();
+        const grad = ctx.createLinearGradient(cx - radius, cy, cx + radius, cy);
+        grad.addColorStop(0, 'rgba(130,240,255,0.03)');
+        grad.addColorStop(.45, 'rgba(130,240,255,0.22)');
+        grad.addColorStop(1, 'rgba(139,140,255,0.05)');
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+
+      // Cross connections
+      for (let i = 0; i < projected.length; i++) {
+        const a = projected[i];
+        for (let j = i + 1; j < projected.length; j++) {
+          const b = projected[j];
+          if (Math.abs(a.ring - b.ring) !== 1) continue;
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 58) {
+            ctx.strokeStyle = `rgba(130,240,255,${Math.max(0, .11 - dist / 700)})`;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Nodes
+      projected.sort((a,b) => a.z - b.z).forEach(p => {
+        const alpha = .25 + ((p.z + 70) / 140) * .65;
+        const size = 1.2 + ((p.z + 70) / 140) * 1.8;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, Math.max(.8, size), 0, Math.PI * 2);
+        ctx.fillStyle = p.ring % 2 ? `rgba(130,240,255,${alpha})` : `rgba(139,140,255,${alpha})`;
+        ctx.fill();
+      });
+
+      // Central core
+      const core = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius * .24);
+      core.addColorStop(0, 'rgba(255,255,255,.86)');
+      core.addColorStop(.08, 'rgba(130,240,255,.42)');
+      core.addColorStop(.46, 'rgba(139,140,255,.11)');
+      core.addColorStop(1, 'rgba(139,140,255,0)');
+      ctx.fillStyle = core;
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius * .24, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.restore();
+      requestAnimationFrame(draw);
+    }
+
+    resizeCanvas();
+    buildPoints();
+    draw();
+    window.addEventListener('resize', resizeCanvas);
+  </script>
+</body>
+</html>
