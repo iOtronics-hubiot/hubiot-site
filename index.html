@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#05060a" />
-  <meta name="description" content="IOtronics is a deep-technology platform developed by Hubiot for high-fidelity acquisition, computational representation and intelligent analysis of modern digital environments." />
-  <meta property="og:title" content="IOtronics — Advanced Digital Interaction" />
-  <meta property="og:description" content="A new technology platform for acquisition, computational representation and intelligent analysis." />
+  <meta name="description" content="Hubiot is engineering next-generation digital interaction through IOtronics: high-fidelity acquisition, reconfigurable hardware intelligence and a pathway to purpose-built silicon." />
+  <meta property="og:title" content="Hubiot — Engineering Next-Gen Digital Interaction" />
+  <meta property="og:description" content="Acquisition and interaction. Hardware intelligence. Future silicon." />
   <meta property="og:type" content="website" />
-  <title>IOtronics — Advanced Digital Interaction</title>
+  <title>Hubiot — Engineering Next-Gen Digital Interaction</title>
 
   <style>
     :root {
@@ -134,6 +134,33 @@
       background: #070910;
       border: 1px solid rgba(255,255,255,.24);
     }
+
+
+    .hubiot-logo { width: 205px; height: auto; }
+    .hero-brand-logo { width: min(440px, 76vw); margin-bottom: 26px; filter: drop-shadow(0 18px 45px rgba(24,167,255,.18)); }
+    .identity-pillars { padding: 0 0 52px; }
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255,255,255,.025);
+      box-shadow: var(--shadow);
+    }
+    .identity-card {
+      min-height: 160px;
+      padding: 30px;
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      border-right: 1px solid var(--line);
+      color: var(--accent);
+    }
+    .identity-card:last-child { border-right: 0; }
+    .identity-card svg { width: 58px; flex: 0 0 auto; }
+    .identity-card span { display: block; color: var(--text); font-size: 16px; font-weight: 760; letter-spacing: .08em; text-transform: uppercase; }
+    .identity-card p { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.45; }
 
     .nav-links {
       display: flex;
@@ -715,6 +742,10 @@
       .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
       .menu-toggle { display: grid; place-items: center; }
       .platform-card, .platform-card:nth-child(n) { grid-column: span 12; }
+      .identity-grid { grid-template-columns: 1fr; }
+      .identity-card { border-right: 0; border-bottom: 1px solid var(--line); }
+      .identity-card:last-child { border-bottom: 0; }
+      .hubiot-logo { width: 166px; }
       .hero h1 { letter-spacing: -.058em; }
       .visual-card { display: none; }
       .commercial-list { grid-template-columns: 1fr; }
@@ -743,9 +774,23 @@
 <body>
   <header class="site-header" id="header">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="IOtronics home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>IOtronics</span>
+      <a class="brand" href="#top" aria-label="Hubiot home">
+        <svg class="hubiot-logo" viewBox="0 0 290 58" role="img" aria-label="Hubiot">
+          <defs>
+            <linearGradient id="hubiotGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#37f0df"/>
+              <stop offset="0.48" stop-color="#18a7ff"/>
+              <stop offset="1" stop-color="#664bff"/>
+            </linearGradient>
+          </defs>
+          <g fill="url(#hubiotGradient)">
+            <path d="M7 29 22 18v25L7 33z"/>
+            <path d="M26 8 41 0v45L26 54z"/>
+            <path d="M45 22 60 14v29L45 51z"/>
+            <path d="M64 6 79 0v54l-15-8z"/>
+          </g>
+          <text x="96" y="39" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="34" letter-spacing="5">HUBIOT</text>
+        </svg>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
         <a href="#vision">Vision</a>
@@ -762,7 +807,23 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal visible">
-          <span class="eyebrow">Developed by Hubiot · Western Australia</span>
+          <svg class="hero-brand-logo" viewBox="0 0 460 92" role="img" aria-label="Hubiot">
+            <defs>
+              <linearGradient id="heroHubiotGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#37f0df"/>
+                <stop offset="0.48" stop-color="#18a7ff"/>
+                <stop offset="1" stop-color="#664bff"/>
+              </linearGradient>
+            </defs>
+            <g fill="url(#heroHubiotGradient)">
+              <path d="M8 47 34 28v43L8 54z"/>
+              <path d="M41 13 67 0v76L41 91z"/>
+              <path d="M74 36 100 23v49L74 86z"/>
+              <path d="M107 10 133 0v91l-26-14z"/>
+            </g>
+            <text x="160" y="64" fill="#f4f7fb" font-family="Arial, Helvetica, sans-serif" font-size="52" letter-spacing="8">HUBIOT</text>
+          </svg>
+          <span class="eyebrow">Engineering Next-Gen Digital Interaction</span>
           <h1>Advancing digital <span class="outline">interaction.</span></h1>
           <p>
             IOtronics is a deep-technology platform for high-fidelity acquisition,
@@ -784,6 +845,23 @@
             <div class="visual-card vc-3"><small>Analysis</small><strong>AI-assisted investigation</strong></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="identity-pillars" aria-label="Hubiot technology pillars">
+      <div class="container identity-grid">
+        <article class="identity-card reveal">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M5 20h22l7 7h14"/><path d="M5 36h30l8-8h24"/><path d="M5 52h20l10-10h32"/><circle cx="5" cy="20" r="2" fill="currentColor"/><circle cx="5" cy="36" r="2" fill="currentColor"/><circle cx="5" cy="52" r="2" fill="currentColor"/></g></svg>
+          <div><span>Acquisition &amp; Interaction</span><p>High-fidelity access to digital systems.</p></div>
+        </article>
+        <article class="identity-card reveal">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="18" y="18" width="36" height="36" rx="5"/><rect x="28" y="28" width="16" height="16" rx="2"/><path d="M25 9v9m11-9v9m11-9v9M25 54v9m11-9v9m11-9v9M9 25h9m-9 11h9m-9 11h9m36-22h9m-9 11h9m-9 11h9"/></g></svg>
+          <div><span>Hardware Intelligence</span><p>Reconfigurable architectures.</p></div>
+        </article>
+        <article class="identity-card reveal">
+          <svg viewBox="0 0 72 72" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M36 7 63 22v29L36 65 9 51V22z"/><path d="m36 17 17 10v19L36 55 19 46V27z"/><path d="m19 27 17 10 17-10M36 37v18"/></g></svg>
+          <div><span>Future Silicon</span><p>Purpose-built ASIC platform.</p></div>
+        </article>
       </div>
     </section>
 
@@ -856,8 +934,7 @@
             <h2>One architecture. Multiple technology layers.</h2>
           </div>
           <p>
-            IOtronics extends the original Mantle Labs concept into a broader platform spanning acquisition hardware,
-            computational modelling, intelligent analysis and future purpose-built silicon.
+            IOtronics brings acquisition hardware, computational representation, intelligent analysis and future purpose-built silicon into a unified technology platform.
           </p>
         </div>
 
@@ -981,7 +1058,7 @@
             Hubiot is seeking research, government, defence, investment and technology partners to accelerate prototyping,
             operational trials and commercialisation of the IOtronics platform.
           </p>
-          <a class="btn btn-primary" href="mailto:contact@hubiot.com.au">contact@hubiot.com.au <span>↗</span></a>
+          <a class="btn btn-primary" href="mailto:info@hubiot.com.au">info@hubiot.com.au <span>↗</span></a>
         </div>
       </div>
     </section>
@@ -989,7 +1066,7 @@
 
   <footer>
     <div class="container footer-grid">
-      <div>© <span id="year"></span> Hubiot Pty Ltd. IOtronics is developed in Western Australia.</div>
+      <div>© <span id="year"></span> Hubiot Pty Ltd.</div>
       <div>Deep technology · Advanced acquisition · Intelligent analysis</div>
     </div>
   </footer>
