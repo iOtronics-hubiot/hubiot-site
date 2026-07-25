@@ -1,78 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#020810" />
-  <meta name="description" content="iOtronics — Next Gen Digital Interaction by Hubiot. High-fidelity acquisition, digital twin analysis, hardware intelligence and future silicon." />
-  <meta property="og:title" content="iOtronics — Next Gen Digital Interaction" />
-  <meta property="og:description" content="Acquisition and interaction. Digital twin and analysis. Hardware intelligence. Future silicon." />
-  <meta property="og:type" content="website" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#020711">
+  <meta name="description" content="iOtronics — Next Gen Digital Interaction. High-fidelity acquisition, digital-twin analysis, hardware intelligence and future silicon.">
+  <meta property="og:title" content="iOtronics — Next Gen Digital Interaction">
+  <meta property="og:description" content="A deep-technology platform for acquisition, analysis, hardware intelligence and future silicon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hubiot.com.au/">
+  <meta property="og:image" content="https://hubiot.com.au/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://hubiot.com.au/">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" as="image" href="assets/images/hero-architecture.webp">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <title>iOtronics — Next Gen Digital Interaction</title>
-  <style>
-    :root{
-      --bg:#020810;--bg2:#04101b;--panel:#071421;--panel2:#091827;--line:#183247;
-      --text:#f5f7fb;--muted:#aab3bf;--cyan:#00e6f2;--blue:#008cff;--violet:#8b5cf6;
-      --max:1440px;--radius:18px;--shadow:0 24px 80px rgba(0,0,0,.35)
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 75% 5%,rgba(0,140,255,.12),transparent 33%),linear-gradient(180deg,#01070e 0%,#03101a 48%,#01070e 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
-    a{color:inherit;text-decoration:none} button{font:inherit} .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-    header{position:sticky;top:0;z-index:30;background:rgba(2,8,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:14px;min-width:180px}.brand svg{width:34px;height:43px}.brand-name{font-size:25px;letter-spacing:.18em;font-weight:500}
-    nav{display:flex;gap:36px;font-size:15px;color:#eef3f8}.nav-actions{display:flex;align-items:center;gap:18px}.contact-btn,.outline-btn{border:1px solid #067b98;border-radius:5px;padding:13px 22px;color:var(--cyan);background:rgba(0,230,242,.02);transition:.25s}.contact-btn:hover,.outline-btn:hover{background:rgba(0,230,242,.08);transform:translateY(-1px)}.sun{font-size:22px;color:#fff}
-    .hero{position:relative;min-height:680px;border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden}.hero .wrap{min-height:680px;display:grid;grid-template-columns:.92fr 1.28fr;align-items:center;position:relative;z-index:2}.hero-copy{padding:70px 0 72px}.product-name{font-weight:300;font-size:clamp(70px,7vw,118px);letter-spacing:.035em;line-height:.92;margin:0 0 22px}.tagline{font-size:clamp(18px,1.65vw,27px);letter-spacing:.33em;text-transform:uppercase;color:#c9d2de;margin:0}.tagline span{background:linear-gradient(90deg,var(--cyan),#79bfff,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}.mini-rule{width:52px;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);margin:42px 0 30px}.hero-copy p{max-width:570px;color:#c8d0da;font-size:18px;margin:0 0 34px}.hero-art{position:absolute;inset:0 0 0 34%;opacity:.96;pointer-events:none}.hero-art:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#020810 0%,rgba(2,8,16,.75) 15%,transparent 45%)}
-    .circuit-scene{width:100%;height:100%;display:block}.cta{display:inline-flex;align-items:center;gap:22px;border:1px solid #0787a3;padding:14px 24px;border-radius:5px;color:var(--cyan)}
-    .section-label{text-align:center;color:var(--cyan);letter-spacing:.23em;text-transform:uppercase;font-size:15px;margin:0 0 16px}.architecture{padding:18px 0 26px}.pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.pillar{background:linear-gradient(180deg,rgba(8,22,36,.86),rgba(5,14,24,.95));border:1px solid var(--line);border-radius:var(--radius);min-height:342px;padding:30px 24px 24px;text-align:center;box-shadow:var(--shadow);transition:.3s}.pillar:hover{transform:translateY(-4px);border-color:#17607a}.pillar svg{width:92px;height:92px;margin:0 auto 20px;display:block}.pillar h3{font-size:17px;font-weight:500;text-transform:uppercase;margin:0 0 14px}.pillar p{color:#b9c2cd;max-width:250px;margin:0 auto 30px}.explore{color:var(--cyan);display:inline-flex;gap:18px;align-items:center}
-    .platform{padding:0 0 26px}.platform-panel{display:grid;grid-template-columns:1.05fr .8fr .8fr;align-items:center;gap:50px;padding:42px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(100deg,rgba(8,23,37,.95),rgba(5,15,25,.95));box-shadow:var(--shadow)}.eyebrow{color:var(--cyan);letter-spacing:.12em;text-transform:uppercase;font-size:14px}.platform h2{font-size:38px;line-height:1.18;font-weight:400;margin:14px 0}.platform p{color:#b9c2cd;font-size:17px}.stack{width:100%;max-width:360px;margin:auto}.feature-list{display:grid;gap:19px;color:#d8dee6}.feature-list div{display:flex;align-items:center;gap:17px}.feature-list div:before{content:"";width:22px;height:2px;background:var(--cyan)}
-    .applications{padding:2px 0 22px}.app-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}.app{padding:24px 16px 18px;text-align:center;border-right:1px solid var(--line)}.app:last-child{border-right:0}.app svg{width:70px;height:70px;margin-bottom:10px}.app strong{display:block;font-weight:400}.app span{color:#c2cad4}
-    .cta-strip{margin:0 auto 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:25px 34px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(90deg,rgba(8,23,37,.98),rgba(5,15,25,.98))}.cta-strip p{margin:0;font-size:19px;color:#c6ced8;max-width:670px}
-    footer{border-top:1px solid rgba(255,255,255,.07);padding:22px 0 30px}.footer-top{display:grid;grid-template-columns:220px 1fr 220px;align-items:center;gap:30px}.footer-links{display:flex;justify-content:center;gap:34px;color:#c8d0da;font-size:14px}.email{color:var(--cyan);text-align:right}.copyright{text-align:center;color:#7d8997;font-size:13px;border-top:1px solid rgba(255,255,255,.05);margin-top:18px;padding-top:18px}
-    @media(max-width:1000px){nav{display:none}.hero .wrap{grid-template-columns:1fr}.hero-art{inset:30% -30% 0 18%;opacity:.58}.hero-copy{padding-top:90px}.pillar-grid{grid-template-columns:repeat(2,1fr)}.platform-panel{grid-template-columns:1fr}.app-grid{grid-template-columns:repeat(2,1fr)}.app:nth-child(2n){border-right:0}.footer-top{grid-template-columns:1fr;text-align:center}.footer-links{flex-wrap:wrap}.email{text-align:center}}
-    @media(max-width:640px){.wrap{width:min(100% - 28px,var(--max))}.brand-name{font-size:20px}.contact-btn{display:none}.hero,.hero .wrap{min-height:610px}.hero-copy p{font-size:16px}.product-name{font-size:64px}.tagline{font-size:15px;line-height:1.7}.hero-art{inset:38% -90% 0 -15%}.pillar-grid{grid-template-columns:1fr}.platform-panel{padding:28px 22px}.platform h2{font-size:31px}.app-grid{grid-template-columns:1fr}.app{border-right:0;border-bottom:1px solid var(--line)}.cta-strip{align-items:flex-start;flex-direction:column}.footer-links{gap:15px}}
-  </style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a href="#top" class="brand" aria-label="Hubiot home">
-      <svg viewBox="0 0 48 60" role="img" aria-label="Hubiot logo"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00eadc"/><stop offset=".55" stop-color="#008dff"/><stop offset="1" stop-color="#5d43ff"/></linearGradient></defs><path d="M4 7 16 1v20l8 4v-12L36 7v46l-12 6V38l-8-4v19L4 47z" fill="url(#lg)"/><path d="M16 21 24 25v13l-8-4z" fill="#061a31" opacity=".85"/></svg>
-      <span class="brand-name">HUBIOT</span>
-    </a>
-    <nav aria-label="Primary"><a href="#platform">Platform</a><a href="#technology">Technology</a><a href="#applications">Applications</a><a href="#research">Research</a><a href="#about">About</a><a href="#news">News</a><a href="#contact">Contact</a></nav>
-    <div class="nav-actions"><a class="contact-btn" href="mailto:info@hubiot.com.au">Contact Us</a><span class="sun">☼</span></div>
-  </div>
-</header>
-<main id="top">
-<section class="hero">
-  <div class="hero-art" aria-hidden="true">
-    <svg class="circuit-scene" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice">
-      <defs><linearGradient id="wire" x1="0" x2="1"><stop stop-color="#003f79"/><stop offset=".45" stop-color="#00dff0"/><stop offset=".75" stop-color="#008cff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient><radialGradient id="glow"><stop stop-color="#55f4ff" stop-opacity=".95"/><stop offset="1" stop-color="#008cff" stop-opacity="0"/></radialGradient><filter id="blur"><feGaussianBlur stdDeviation="18"/></filter></defs>
-      <rect width="1200" height="760" fill="#020810"/><g opacity=".28" stroke="#0f3e60" stroke-width="1"><path d="M0 560H1200M0 610H1200M0 660H1200M100 0V760M220 0V760M340 0V760M460 0V760M580 0V760M700 0V760M820 0V760M940 0V760M1060 0V760"/></g>
-      <circle cx="735" cy="365" r="260" fill="url(#glow)" opacity=".24" filter="url(#blur)"/>
-      <g fill="#061523" stroke="#0d4d76"><path d="M430 520 510 472l80 46-80 48z"/><path d="M560 455 642 408l82 47-82 48z"/><path d="M698 487 786 436l88 50-88 52z"/><path d="M820 410 920 352l98 57-99 58z"/></g>
-      <g fill="#071a2b" stroke="#1175a7"><path d="M535 455v-105l74-43v106z"/><path d="M609 413v-106l74 43v105z"/><path d="M690 430v-155l78-46v155z"/><path d="M768 384V229l78 46v155z"/><path d="M815 360V165l86-50v195z"/><path d="M901 310V115l86 50v195z"/></g>
-      <g fill="none" stroke="url(#wire)" stroke-width="2"><path d="M0 606h300l70-42h180l95-55h190l120-68h245"/><path d="M0 650h260l88-53h172l130-75h208l100-58h242"/><path d="M130 760V630l110-64h225l110-64h178l120-69h327"/><path d="M310 760V680l96-55h192l88-51h220l98-57h196"/><path d="M490 760V620l120-68h224l75-44h291"/></g>
-      <g stroke="url(#wire)" stroke-width="2"><path d="M610 412V180M690 430V120M768 384V75M850 350V35M930 318V85M1010 300V150"/></g>
-      <g fill="#00dff0"><circle cx="610" cy="180" r="4"/><circle cx="690" cy="120" r="4"/><circle cx="768" cy="75" r="4"/><circle cx="850" cy="35" r="4"/><circle cx="930" cy="85" r="4"/><circle cx="1010" cy="150" r="4"/></g><g fill="#8b5cf6"><circle cx="845" cy="528" r="5"/><circle cx="955" cy="465" r="5"/></g>
-    </svg>
-  </div>
-  <div class="wrap"><div class="hero-copy"><h1 class="product-name">iOtronics</h1><p class="tagline"><span>Next Gen Digital Interaction</span></p><div class="mini-rule"></div><p>A deep-technology platform purpose-built for high-fidelity acquisition, intelligent analysis and advanced digital interaction.</p><a class="cta" href="#platform">Explore Platform <span>→</span></a></div></div>
-</section>
-<section class="architecture wrap" id="technology"><p class="section-label">The Platform Architecture</p><div class="pillar-grid">
-  <article class="pillar"><svg viewBox="0 0 100 100"><g fill="none" stroke="#fff" stroke-width="2"><path d="M12 35h25l10-10h22"/><path d="M12 50h38l12-12h22"/><path d="M12 65h25l10 10h22"/></g><g fill="#071421" stroke="#fff" stroke-width="2"><circle cx="70" cy="25" r="5"/><circle cx="84" cy="38" r="5"/><circle cx="70" cy="75" r="5"/></g><path d="M11 50h38" stroke="#00e6f2" stroke-width="3"/></svg><h3>Acquisition &amp; Interaction</h3><p>High-fidelity access to digital systems.</p><a class="explore" href="#platform">Explore <span>→</span></a></article>
-  <article class="pillar"><svg viewBox="0 0 100 100"><g fill="none" stroke="#fff" stroke-width="2"><rect x="18" y="18" width="15" height="15"/><rect x="44" y="18" width="15" height="15"/><rect x="70" y="18" width="15" height="15"/><rect x="18" y="44" width="15" height="15"/><rect x="44" y="44" width="15" height="15" fill="#fff"/><rect x="70" y="44" width="15" height="15"/><rect x="18" y="70" width="15" height="15"/><rect x="44" y="70" width="15" height="15"/><rect x="70" y="70" width="15" height="15" stroke="#00e6f2"/></g></svg><h3>Digital Twin &amp; Analysis</h3><p>Transforming digital representations into actionable intelligence.</p><a class="explore" href="#platform">Explore <span>→</span></a></article>
-  <article class="pillar"><svg viewBox="0 0 100 100"><polygon points="50,8 84,28 84,68 50,88 16,68 16,28" fill="none" stroke="#fff" stroke-width="2"/><rect x="36" y="34" width="28" height="28" fill="none" stroke="#fff" stroke-width="2"/><g stroke="#fff"><path d="M42 27v7M50 27v7M58 27v7M42 62v7M50 62v7M58 62v7M29 40h7M29 48h7M29 56h7M64 40h7M64 48h7M64 56h7"/></g></svg><h3>Hardware Intelligence</h3><p>Reconfigurable architectures.</p><a class="explore" href="#platform">Explore <span>→</span></a></article>
-  <article class="pillar"><svg viewBox="0 0 100 100"><defs><linearGradient id="fut" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".65" stop-color="#fff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><polygon points="50,8 84,28 84,68 50,88 16,68 16,28" fill="none" stroke="url(#fut)" stroke-width="2"/><path d="m30 42 20-12 20 12-20 12zM30 55l20 12 20-12" fill="none" stroke="#fff" stroke-width="2"/></svg><h3>Future Silicon</h3><p>Purpose-built ASIC platform.</p><a class="explore" href="#platform">Explore <span>→</span></a></article>
-</div></section>
-<section class="platform wrap" id="platform"><div class="platform-panel"><div><span class="eyebrow">The iOtronics Platform</span><h2>Purpose-built for advanced digital interaction</h2><p>iOtronics combines novel hardware architectures with intelligent software to enable high-fidelity visibility, interaction and analysis.</p><a class="outline-btn" href="mailto:info@hubiot.com.au">Learn More &nbsp; →</a></div><svg class="stack" viewBox="0 0 360 320" aria-hidden="true"><defs><linearGradient id="sl" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00e6f2"/><stop offset=".55" stop-color="#008cff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs><g fill="#071827" stroke="url(#sl)" stroke-width="2"><path d="M40 78 180 10l140 68-140 68z"/><path d="M40 124 180 56l140 68-140 68z"/><path d="M40 170 180 102l140 68-140 68z"/><path d="M40 216 180 148l140 68-140 68z"/></g><g fill="#00e6f2"><circle cx="180" cy="26" r="3"/><circle cx="104" cy="62" r="3"/><circle cx="255" cy="62" r="3"/><circle cx="180" cy="118" r="3"/></g></svg><div class="feature-list"><div>High-Fidelity Acquisition</div><div>Intelligent Analysis</div><div>Hardware Acceleration</div><div>Scalable Architecture</div><div>Secure by Design</div></div></div></section>
-<section class="applications wrap" id="applications"><p class="section-label">Application Domains</p><div class="app-grid">
-  <div class="app"><svg viewBox="0 0 80 80"><path d="M40 10c-18 0-27 14-27 31 0 11-3 21-8 29M40 19c-12 0-18 9-18 22 0 13-4 23-10 29M40 28c-7 0-10 5-10 13 0 14-4 23-7 29M40 10c18 0 27 14 27 31 0 11 3 21 8 29M40 19c12 0 18 9 18 22 0 13 4 23 10 29M40 28c7 0 10 5 10 13 0 14 4 23 7 29M40 36v34" fill="none" stroke="#dffcff" stroke-width="2"/></svg><strong>Digital Forensics</strong><span>&amp; eDiscovery</span></div>
-  <div class="app"><svg viewBox="0 0 80 80"><path d="M40 8 66 18v20c0 17-10 28-26 35C24 66 14 55 14 38V18z" fill="none" stroke="#fff" stroke-width="2"/><path d="m29 41 7 7 16-18" fill="none" stroke="#fff" stroke-width="2"/></svg><strong>Cybersecurity</strong><span>&amp; Threat Hunting</span></div>
-  <div class="app"><svg viewBox="0 0 80 80"><g fill="none" stroke="#fff" stroke-width="2"><path d="M40 7 20 72M40 7l20 65M26 30h28M21 46h38M16 62h48M28 17h24"/><path d="m29 30 22 16M51 30 29 46M21 46l38 16M59 46 21 62" opacity=".8"/></g></svg><strong>Critical Infrastructure</strong><span>Resilience</span></div>
-  <div class="app"><svg viewBox="0 0 80 80"><g fill="none" stroke="#fff" stroke-width="2"><rect x="22" y="22" width="36" height="36"/><rect x="30" y="30" width="20" height="20"/><path d="M28 12v10M40 12v10M52 12v10M28 58v10M40 58v10M52 58v10M12 28h10M12 40h10M12 52h10M58 28h10M58 40h10M58 52h10"/></g></svg><strong>Semiconductor</strong><span>Innovation</span></div>
-  <div class="app"><svg viewBox="0 0 80 80"><path d="M40 10c-8 0-14 6-14 14-8 0-14 6-14 14 0 6 4 11 10 13 0 10 8 18 18 18M40 10c8 0 14 6 14 14 8 0 14 6 14 14 0 6-4 11-10 13 0 10-8 18-18 18M40 10v59M28 28c8 2 12 7 12 14M52 28c-8 2-12 7-12 14M23 48c9 0 14 4 17 11M57 48c-9 0-14 4-17 11" fill="none" stroke="#fff" stroke-width="2"/></svg><strong>AI &amp; Machine</strong><span>Intelligence</span></div>
-</div></section>
-<section class="wrap cta-strip" id="contact"><p>Advancing next-gen digital interaction through innovation, architecture and intelligent systems.</p><a class="outline-btn" href="mailto:info@hubiot.com.au">Get in Touch &nbsp; →</a></section>
-</main>
-<footer><div class="wrap"><div class="footer-top"><a href="#top" class="brand"><svg viewBox="0 0 48 60"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00eadc"/><stop offset=".55" stop-color="#008dff"/><stop offset="1" stop-color="#5d43ff"/></linearGradient></defs><path d="M4 7 16 1v20l8 4v-12L36 7v46l-12 6V38l-8-4v19L4 47z" fill="url(#lg2)"/><path d="M16 21 24 25v13l-8-4z" fill="#061a31" opacity=".85"/></svg><span class="brand-name">HUBIOT</span></a><div class="footer-links"><a href="#platform">Platform</a><a href="#technology">Technology</a><a href="#applications">Applications</a><a href="#research">Research</a><a href="#about">About</a><a href="#news">News</a><a href="#contact">Contact</a></div><a class="email" href="mailto:info@hubiot.com.au">info@hubiot.com.au</a></div><div class="copyright">© 2026 Hubiot Pty Ltd. All rights reserved.</div></div></footer>
-</body></html>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <nav class="wrap nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Hubiot home">
+        <img src="assets/images/hubiot-mark.webp" alt="" width="32" height="36">
+        <span>HUBIOT</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-button>
+        <span></span><span></span><span></span><span class="sr-only">Open navigation</span>
+      </button>
+
+      <div class="nav-links" id="site-menu" data-menu>
+        <a href="#platform">Platform</a>
+        <a href="#technology">Technology</a>
+        <a href="#applications">Applications</a>
+        <a href="products/iotronics/">Products</a>
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="mailto:info@hubiot.com.au">Contact Us</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <h1><span class="small-i">i</span>Otronics</h1>
+          <p class="kicker">Next Gen Digital Interaction</p>
+          <div class="rule"></div>
+          <p class="lead">High-fidelity acquisition, intelligent analysis and purpose-built hardware architectures.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#platform">Explore Platform <span aria-hidden="true">→</span></a>
+            <a class="button ghost" href="mailto:info@hubiot.com.au">Start a conversation</a>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#platform" aria-label="Scroll to platform architecture">↓</a>
+    </section>
+
+    <section class="section" id="platform">
+      <div class="wrap">
+        <p class="section-label reveal">The Platform Architecture</p>
+
+        <div class="pillars">
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 90 76" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path class="accent" d="M6 20h25m-25 18h31m-31 18h25"/>
+                <path d="M31 20l12-10h19m-25 28h25m-31 18l12 10h19"/>
+                <circle cx="68" cy="10" r="4"/><circle cx="68" cy="38" r="4"/><circle cx="68" cy="66" r="4"/>
+              </svg>
+            </div>
+            <h2>Acquisition &amp; Interaction</h2>
+            <p>High-fidelity access to digital systems.</p>
+            <a href="#technology">Explore <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 90 76" fill="none" stroke="currentColor" stroke-width="1.7">
+                <rect x="14" y="12" width="13" height="13"/><rect x="38" y="12" width="13" height="13"/><rect x="62" y="12" width="13" height="13"/>
+                <rect x="14" y="36" width="13" height="13"/><rect x="38" y="36" width="13" height="13" fill="currentColor"/>
+                <rect class="accent" x="62" y="36" width="13" height="13"/><rect x="14" y="60" width="13" height="13"/>
+                <rect x="38" y="60" width="13" height="13"/><rect class="blue" x="62" y="60" width="13" height="13"/>
+              </svg>
+            </div>
+            <h2>Digital Twin &amp; Analysis</h2>
+            <p>Transforming digital representations into actionable intelligence.</p>
+            <a href="#technology">Explore <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 90 76" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M45 4l31 18v32L45 72 14 54V22L45 4z"/><rect x="32" y="25" width="26" height="26"/>
+                <path d="M36 18v7m9-7v7m9-7v7M36 51v7m9-7v7m9-7v7M25 29h7m-7 9h7m-7 9h7M58 29h7m-7 9h7m-7 9h7"/>
+              </svg>
+            </div>
+            <h2>Hardware Intelligence</h2>
+            <p>Reconfigurable architectures.</p>
+            <a href="#technology">Explore <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 90 76" fill="none" stroke="currentColor" stroke-width="1.7">
+                <path d="M45 4l31 18v32L45 72 14 54V22L45 4z"/>
+                <path class="violet" d="M29 35l16-9 16 9-16 9-16-9zm0 10l16 9 16-9"/>
+              </svg>
+            </div>
+            <h2>Future Silicon</h2>
+            <p>Purpose-built ASIC platform.</p>
+            <a href="#research">Explore <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="technology">
+      <div class="wrap technology-panel reveal">
+        <div>
+          <p class="eyebrow">The iOtronics Platform</p>
+          <h2>Purpose-built digital interaction.</h2>
+          <p>Novel hardware and intelligent software form a new interaction layer spanning acquisition, digital-twin analysis and future silicon.</p>
+          <a class="button primary" href="mailto:info@hubiot.com.au">Learn More <span aria-hidden="true">→</span></a>
+        </div>
+
+        <img class="stack-image" src="assets/images/platform-stack.webp" alt="Layered iOtronics platform architecture" loading="lazy">
+
+        <ul class="feature-list">
+          <li>High-Fidelity Acquisition</li>
+          <li>Intelligent Analysis</li>
+          <li>Hardware Acceleration</li>
+          <li>Scalable Architecture</li>
+          <li>Secure by Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="wrap">
+        <p class="section-label reveal">Application Domains</p>
+        <div class="domains">
+          <article class="domain reveal"><span class="domain-icon">⌁</span><h2>Digital Forensics<br>&amp; eDiscovery</h2></article>
+          <article class="domain reveal"><span class="domain-icon">◇</span><h2>Cybersecurity<br>&amp; Threat Hunting</h2></article>
+          <article class="domain reveal"><span class="domain-icon">△</span><h2>Critical Infrastructure<br>Resilience</h2></article>
+          <article class="domain reveal"><span class="domain-icon">▣</span><h2>Semiconductor<br>Innovation</h2></article>
+          <article class="domain reveal"><span class="domain-icon">◉</span><h2>AI &amp; Machine<br>Intelligence</h2></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research" id="research">
+      <div class="wrap research-grid reveal">
+        <div>
+          <p class="eyebrow">Research Direction</p>
+          <h2>From advanced acquisition to application-specific silicon.</h2>
+        </div>
+        <div class="roadmap" aria-label="Technology roadmap">
+          <div><span>01</span><strong>Acquisition Architecture</strong></div>
+          <div><span>02</span><strong>Wireless Interaction</strong></div>
+          <div><span>03</span><strong>Digital Twin Generation</strong></div>
+          <div><span>04</span><strong>Cognitive Analysis</strong></div>
+          <div><span>05</span><strong>ASIC Platform</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap statement reveal">
+        <p class="eyebrow">Hubiot</p>
+        <h2>Developing enabling technologies for the next generation of digital interaction.</h2>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap cta reveal">
+        <p>Explore research, strategic collaboration and commercialisation opportunities.</p>
+        <a class="button primary" href="mailto:info@hubiot.com.au">Get in Touch <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <a class="brand" href="#top"><img src="assets/images/hubiot-mark.webp" alt="" width="32" height="36"><span>HUBIOT</span></a>
+      <span>© 2026 Hubiot Pty Ltd.</span>
+      <a class="contact" href="mailto:info@hubiot.com.au">info@hubiot.com.au</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
